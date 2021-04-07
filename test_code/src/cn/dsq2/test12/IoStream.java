@@ -30,15 +30,12 @@ public class IoStream {
                 字节输入路径
                 字节单个，多个输入；字节续写输入
         */
-        
+
         //FileOutputStream
 //        demo01();
-        
+
         //FileInputStream
         demo02();
-
-
-
 
     }
 
@@ -67,11 +64,16 @@ public class IoStream {
 //        }
 
         //一次读取多个字符
-        byte[] by=new byte[2];
-        int len = finput.read(by); //这里的len 为读取字符的个数
-        System.out.println(len);        //>>>2
-        System.out.println(new String(by));             //>>>AB
-
+//        byte[] by=new byte[2];
+//        int len = finput.read(by); //这里的len 为读取字符的个数
+//        System.out.println(len);        //>>>2
+//        System.out.println(new String(by));             //>>>AB
+        byte[] by = new byte[1024];
+        int len;
+        while ((len = finput.read(by)) != -1) {
+            System.out.println(len);
+            System.out.println(new String(by));
+        }
 
 
         //读取多个字符
@@ -86,13 +88,13 @@ public class IoStream {
         //写入单个字符 97 -> a
         fileOutputStream.write(97);
         //写入多个字符
-        byte[] by ={97,98,99};
+        byte[] by = {97, 98, 99};
         fileOutputStream.write(by);
         // 注意事项，以上每次重写字符会清楚文本原油字符
         FileOutputStream fo2 = new FileOutputStream(file);
         fo2.write(97);
         //文件续写，添加参数true
-        FileOutputStream fo3 = new FileOutputStream(file,true);
+        FileOutputStream fo3 = new FileOutputStream(file, true);
         fo3.write(97);
         //输出换行, 注意linux 和 window 的换行符不一样
         fo3.write("\n".getBytes(StandardCharsets.UTF_8));
