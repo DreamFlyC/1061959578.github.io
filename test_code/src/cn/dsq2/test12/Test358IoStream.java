@@ -22,7 +22,7 @@ java.io 类 OutputStream:此抽象类是表示输出字节流的所有类的超�
 本节练习子类：FileInputStream,FilterOutputStream
     了解构造方法：
 */
-public class IoStream {
+public class Test358IoStream {
     public static void main(String[] args) throws IOException {
         //tip:需要注意 输入输出流都是字节。
         /*
