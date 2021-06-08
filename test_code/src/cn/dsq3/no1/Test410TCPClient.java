@@ -1,4 +1,4 @@
-package cn.test;
+package cn.dsq3.no1;
 
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.Scanner;
 
         成员方法；
         OutputStream	getOutputStream()：返回此套接字的输出流。
-        InputStream	getInputStream()：返回此套接字的输入流。
+        InputStream	    getInputStream()：返回此套接字的输入流。
         void	close()：关闭此套接字。
 
         注意：

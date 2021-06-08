@@ -2,7 +2,6 @@ package cn.dsq2.test11;
 
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FilenameFilter;
 
 public class Test356Filter {
@@ -38,8 +37,7 @@ public class Test356Filter {
 
     private static void demo01(File file) {
         //按文件名过滤
-        File[] files = file.listFiles(pathname -> {
-
+        File[] files = file.listFiles(pathname ->{
             if(pathname.isDirectory()){
                 return true;
             }

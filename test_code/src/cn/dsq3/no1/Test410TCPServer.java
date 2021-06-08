@@ -1,4 +1,4 @@
-package cn.test;
+package cn.dsq3.no1;
 
 
 import java.io.IOException;
