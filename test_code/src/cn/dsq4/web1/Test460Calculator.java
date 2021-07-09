@@ -6,11 +6,24 @@ package cn.dsq4.web1;
  */
 public class Test460Calculator {
 
-    public int add(int a, int b){
-        return  a+b;
+    @Test475Check4
+    public void add(int a, int b){
+        System.out.println("a+b="+(a+b));
     }
 
-    public int sub(int a,int b){
-        return  a-b;
+    @Test475Check4
+    public void sub(int a,int b){
+        System.out.println("a-b="+(a-b));
     }
+
+    @Test475Check4
+    public void mul(int a ,int b){
+        System.out.println("a*b="+(a*b));
+    }
+
+    @Test475Check4
+    public void div(int a, int b){
+        System.out.println(a+"/"+b+"="+a/b);
+    }
+
 }

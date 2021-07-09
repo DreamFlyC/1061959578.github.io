@@ -1,4 +1,4 @@
-package cn.test;
+package cn.dsq4.web1test;
 
 public class Test {
     public static void main(String[] args) {
