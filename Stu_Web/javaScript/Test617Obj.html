@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+
+    <script name="Function参数">
+        function fun1(a, b) {
+          alert(a)
+        }
+        // fun1(3,4)
+
+        var fun2=function (a,b){
+          alert(b)
+        }
+        // fun2(3,4)
+    </script>
+
+    <script name="array对象">
+        var list1=new Array(1,2,3);
+        var list2=Array(3);
+        var list3=[1,2,3,4];
+        var list4=list1.concat(list3);
+
+        document.write(list1,"<br>");
+        document.write(list2,"<br>");
+        document.write(list3,"<br>");
+        document.write(list4,"<br>");
+        document.write(list4.length);
+    </script>
+
+    <script name="Date对象">
+        var date = new Date();
+        document.write(date,"<br>");
+        document.write(date.toLocaleString(),"<br>")
+        document.write(date.getTime(),"<br>")
+
+    </script>
+    <script name="Math对象">
+        document.write(Math.PI,"<br>")
+        var num=Math.random();      //random ：产生一个0-1之间的随机数,左闭右开
+        document.write(num,"<br>")
+        document.write(Math.ceil(num),"<br>");  //向上取整
+        document.write(Math.floor(num),"<br>"); //向下取整
+        document.write(Math.round(num),"<br>"); //四舍五入
+    </script>
+
+    <script name="正在表达式对象">
+        var reg = new RegExp("\\w{6,12}","g");
+        var reg2 =/\w{6,12}/g;
+
+        document.write(reg,"<br>");
+        document.write(reg2,"<br>");
+
+    </script>
+
+    <script name="全局函数">
+        var str="七日你是傻逼"
+        var enc = encodeURI(str);	            //把字符串编码为 URI。
+        document.write(enc,"<br>")
+        var dec = decodeURI(enc);	            //解码某个编码的 URI。
+        document.write(dec,"<br>")
+        var par = parseInt(dec);	            //解析一个字符串并返回一个整数。
+        document.write(par,"<br>");
+        var isn = isNaN(par);
+        document.write(isn,"<br>");             //检查某个值是否是数字。
+        var a = NaN;
+        document.write(a === NaN);          //NaN不能用等价判断
+        var str = "alert(123)"
+        alert(str)
+        eval(str);	//计算 JavaScript 字符串，并把它作为脚本代码来执行。
+
+/*
+        decodeURIComponent();	    //解码一个编码的 URI 组件。
+        encodeURIComponent();	    //把字符串编码为 URI 组件。
+        编码的字符更多
+        */
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

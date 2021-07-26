@@ -9,6 +9,7 @@ public class Test356Filter {
         File file = new File("test_code\\src\\cn\\dsq");
         // 按文件名过滤
         demo01(file);
+        System.out.println("方法2----------------------------");
         //
         demo02(file);
     }
@@ -17,14 +18,16 @@ public class Test356Filter {
         File[] files = file.listFiles(new FilenameFilter() {
             @Override
             public boolean accept(File dir, String name) {
+                System.out.println("------------------");
                 System.out.println(dir);
                 System.out.println("dir.getname:"+dir.getName());
                 System.out.println("name:"+name);
                 return new File(dir,name).isDirectory()||name.toLowerCase().endsWith("java");
+
             }
         });
 
-        System.out.println("遍历2----------------------------");
+
         for (File file1 : files) {
             //递归 遍历目录
             if (file1.isDirectory()){

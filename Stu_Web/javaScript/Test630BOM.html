@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流浪器对象模型</title>
+    <script name="Window对象">
+      //Window对象不需要创建可以直接使用
+      window.alert("aaa");
+      var ans = window.confirm("睿睿是渣男吗");
+      document.write(ans,"<br>");
+        // 如果用户点击确定按钮，则方法返回true。 如果用户点击取消按钮，则方法返回false
+      var ans2 = window.prompt("睿睿是渣男");
+      document.write(ans2,"<br>")
+
+      function cb(){
+          win.close();
+      }
+
+    </script>
+</head>
+<body>
+    <input id = "ob" type="button" value="打开窗口">
+    <br>
+    <input id = "cb" type="button" value="关闭窗口" onclick="cb()">
+    <script>
+        var win;
+        var ob = document.getElementById("ob");
+        ob.onclick = function ob(){
+            win = open()
+        }
+
+
+
+    </script>
+</body>
+</html>
